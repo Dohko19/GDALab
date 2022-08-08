@@ -1,0 +1,203 @@
+{
+	"info": {
+		"_postman_id": "ccc6e59e-af20-49f4-aa4c-b84730023eb8",
+		"name": "GDALab",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5828415"
+	},
+	"item": [
+		{
+			"name": "GDALAB",
+			"item": [
+				{
+					"name": "Create Customer",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "6|3VPS7591ruebPuoOOhMa865ShBLgiTKrl8TA32JSS8UpaW0X1QAH136SYYPPw7RcySvSwLrEMgYoFNxPhzGzflrH7l1bS5gTjkyYI9yGg2UEcnGsmryQk6eYb4hxClGZvyHrtwUUOuvnjRcKfJYGLgsHklhULbP7lt2XrXpFS67V2HKP3ogpDT399HbHaBgxYLhQAWfzFtiFiDz50OhpaLXSBV3iHJCdFDhNbxNOUn86XTfOdaniel@email.com020847",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "dni",
+									"value": "AJSHDJKASDHK",
+									"type": "text"
+								},
+								{
+									"key": "region_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "commune_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "example@email.com",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "Test",
+									"type": "text"
+								},
+								{
+									"key": "last_name",
+									"value": "Api",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "Address type",
+									"type": "text"
+								},
+								{
+									"key": "data_reg",
+									"value": "2022-08-16 16:31:03",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/customer/create",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"customer",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search customer",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "6|3VPS7591ruebPuoOOhMa865ShBLgiTKrl8TA32JSS8UpaW0X1QAH136SYYPPw7RcySvSwLrEMgYoFNxPhzGzflrH7l1bS5gTjkyYI9yGg2UEcnGsmryQk6eYb4hxClGZvyHrtwUUOuvnjRcKfJYGLgsHklhULbP7lt2XrXpFS67V2HKP3ogpDT399HbHaBgxYLhQAWfzFtiFiDz50OhpaLXSBV3iHJCdFDhNbxNOUn86XTfOdaniel@email.com020847",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/customer?dni=AJSHDJKASDHK",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"customer"
+							],
+							"query": [
+								{
+									"key": "dni",
+									"value": "AJSHDJKASDHK"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete customer",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/customer/AJSHDJKASDHK",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"customer",
+								"AJSHDJKASDHK"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login API",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "daniel@email.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/login",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get current user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "6|3VPS7591ruebPuoOOhMa865ShBLgiTKrl8TA32JSS8UpaW0X1QAH136SYYPPw7RcySvSwLrEMgYoFNxPhzGzflrH7l1bS5gTjkyYI9yGg2UEcnGsmryQk6eYb4hxClGZvyHrtwUUOuvnjRcKfJYGLgsHklhULbP7lt2XrXpFS67V2HKP3ogpDT399HbHaBgxYLhQAWfzFtiFiDz50OhpaLXSBV3iHJCdFDhNbxNOUn86XTfOdaniel@email.com020847",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/user",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"user"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
